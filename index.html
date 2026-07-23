@@ -39,8 +39,15 @@
   /* ============ HERO (v6) ============ */
   .hero{height:100vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
   .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
-  .hero-media .fallback{position:absolute;inset:0;filter:grayscale(.55) sepia(.18) contrast(1.08) brightness(.62);
-    animation:ken 24s ease-in-out infinite alternate;background-size:cover;background-position:center}
+  .hero-media .fallback{position:absolute;inset:0;
+    background:radial-gradient(72% 78% at 50% 118%,rgba(193,80,46,.30),transparent 62%),
+      radial-gradient(56% 56% at 82% 6%,rgba(217,154,60,.10),transparent 60%),var(--bg)}
+  .hero-media .fallback::after{content:"";position:absolute;left:50%;top:50%;
+    width:min(56vw,620px);aspect-ratio:143.56/250.84;transform:translate(-50%,-46%);
+    background:linear-gradient(150deg,rgba(193,80,46,.50),rgba(217,154,60,.26) 55%,rgba(232,221,201,.10));
+    -webkit-mask:url("data:image/svg+xml,%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20143.56%20250.84%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Capa_1%22%20data-name%3D%22Capa%201%22%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M74.56%2C15.76c-.26.48-8.96-6.56-27.13-6.27-5.41.09-13.11.97-20.94%2C7.32%2C0%2C0%2C9.14-3.56%2C21.11-.98%2C15.61%2C3.19%2C23.57%2C13.13%2C27.27%2C18.99%2C0%2C0%2C.16-.38%2C4.1-3.92%2C4.82-4.33%2C5.49-4.5%2C14.63-6.63%2C9.32-2.17%2C4.44%2C3.2%2C4.44%2C3.2%2C0%2C0-3.07%2C2.81-3.28%2C7.32-.21%2C4.51-5.35%2C8.71-5.95%2C9.17-2.53%2C1.94-5.16%2C3.18-4.07%2C7.37%2C1.17%2C4.51%2C1.97%2C8.18%2C2.04%2C10.31.28%2C9.11.38%2C4.34-.29%2C14.4-.81%2C12.04-9.72%2C9.66-10.65%2C17.92%2C0%2C0%2C16.73%2C4.46%2C20.12%2C12.32%2C3.4%2C7.86%2C5.03%2C23.34%2C5.29%2C33.91.25%2C10.35-.93%2C35.44-.93%2C35.44%2C0%2C0-.44%2C5.43-3.05%2C1.56-2.61-3.86-6.09.4-6.19%2C2.16-.09%2C1.76%2C2.14%2C10.83-4.51%2C11.13-1.25.47-2.24%2C3.28%2C4.19%2C2.99%2C1.79-.08%2C4.33-1.24%2C5.22-3.51%2C0%2C0%2C2.08%2C4.91%2C5.11%2C4.26%2C3.36-.72%2C4.75-8.21%2C4.75-8.21%2C0%2C0%2C1.5%2C5.48%2C3.44%2C4.79%2C1.95-.69.93-3.52-.67-8.36-1.49-4.51-.42-17.04-.42-17.04l1.41-23.49s2.07-19.31%2C4.34-25.65c2.27-6.34%2C4.91-11.03%2C4.91-11.03%2C0%2C0%2C2.74-3.72%2C2.1-6.88%2C0%2C0%2C4.68-.48%2C6.34-2.23%2C1.79-1.9%2C1.14-5.72-.02-9.17-1.16-3.45-.5-13.87-1.25-18.66-.83-5.26-1.99-12.55-1.99-12.55%2C0%2C0-2.89-9.87%2C1.64-12.04%2C5.19-2.49%2C7.07-5.12%2C10.03-12.45%2C2.77-6.86%2C8.8-9.86%2C7.75-11.06-.55-.63-7.5-1.96-15.69%2C1.73-3.66%2C1.65-8.72%2C8.71-14.52%2C9.02%2C0%2C0-6.54-5.21-10.34-8.74-9.49-8.83-18.84-14.13-18.84-14.13%2C0%2C0-4.43-2.41-11.47-4.96%2C0%2C0-7.83-2.48-15.4-2.84-7.88-.38-9.16-.29-13.51.07-2.81.24-19.62.94-40.88%2C18.45%2C0%2C0%2C18.37-9.38%2C28.97-11.58%2C9.72-2.01%2C13.11-2.13%2C20.26-1.55%2C15.88%2C1.3%2C22.53%2C10.13%2C22.53%2C10.13Z%22%2F%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M76.07%2C250.84c3.03-7.14%2C7.77-23.72%2C7.05-40.45%2C0%2C0-3.72.24-10.1-.21-6.38-.45-6.68-6.46-6.68-6.46%2C0%2C0-3.59.74-6.72-5.45%2C0%2C0-1.65-5.23-.58-10.87%2C1.07-5.64-.02-9.67-3.6-25.55%2C0%2C0-.88-2.66-2.14-6.22-2.52%2C12.25-11.87%2C26.69-25.33%2C38.22-9%2C7.71-18.77%2C13.15-27.98%2C16.08%2C4.52%2C4.85%2C9.6%2C7.05%2C17%2C20.19%2C5.13%2C9.11%2C6.1%2C15.84%2C7.04%2C20.71h52.03Z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20143.56%20250.84%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23fff%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cg%20id%3D%22Capa_1%22%20data-name%3D%22Capa%201%22%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M74.56%2C15.76c-.26.48-8.96-6.56-27.13-6.27-5.41.09-13.11.97-20.94%2C7.32%2C0%2C0%2C9.14-3.56%2C21.11-.98%2C15.61%2C3.19%2C23.57%2C13.13%2C27.27%2C18.99%2C0%2C0%2C.16-.38%2C4.1-3.92%2C4.82-4.33%2C5.49-4.5%2C14.63-6.63%2C9.32-2.17%2C4.44%2C3.2%2C4.44%2C3.2%2C0%2C0-3.07%2C2.81-3.28%2C7.32-.21%2C4.51-5.35%2C8.71-5.95%2C9.17-2.53%2C1.94-5.16%2C3.18-4.07%2C7.37%2C1.17%2C4.51%2C1.97%2C8.18%2C2.04%2C10.31.28%2C9.11.38%2C4.34-.29%2C14.4-.81%2C12.04-9.72%2C9.66-10.65%2C17.92%2C0%2C0%2C16.73%2C4.46%2C20.12%2C12.32%2C3.4%2C7.86%2C5.03%2C23.34%2C5.29%2C33.91.25%2C10.35-.93%2C35.44-.93%2C35.44%2C0%2C0-.44%2C5.43-3.05%2C1.56-2.61-3.86-6.09.4-6.19%2C2.16-.09%2C1.76%2C2.14%2C10.83-4.51%2C11.13-1.25.47-2.24%2C3.28%2C4.19%2C2.99%2C1.79-.08%2C4.33-1.24%2C5.22-3.51%2C0%2C0%2C2.08%2C4.91%2C5.11%2C4.26%2C3.36-.72%2C4.75-8.21%2C4.75-8.21%2C0%2C0%2C1.5%2C5.48%2C3.44%2C4.79%2C1.95-.69.93-3.52-.67-8.36-1.49-4.51-.42-17.04-.42-17.04l1.41-23.49s2.07-19.31%2C4.34-25.65c2.27-6.34%2C4.91-11.03%2C4.91-11.03%2C0%2C0%2C2.74-3.72%2C2.1-6.88%2C0%2C0%2C4.68-.48%2C6.34-2.23%2C1.79-1.9%2C1.14-5.72-.02-9.17-1.16-3.45-.5-13.87-1.25-18.66-.83-5.26-1.99-12.55-1.99-12.55%2C0%2C0-2.89-9.87%2C1.64-12.04%2C5.19-2.49%2C7.07-5.12%2C10.03-12.45%2C2.77-6.86%2C8.8-9.86%2C7.75-11.06-.55-.63-7.5-1.96-15.69%2C1.73-3.66%2C1.65-8.72%2C8.71-14.52%2C9.02%2C0%2C0-6.54-5.21-10.34-8.74-9.49-8.83-18.84-14.13-18.84-14.13%2C0%2C0-4.43-2.41-11.47-4.96%2C0%2C0-7.83-2.48-15.4-2.84-7.88-.38-9.16-.29-13.51.07-2.81.24-19.62.94-40.88%2C18.45%2C0%2C0%2C18.37-9.38%2C28.97-11.58%2C9.72-2.01%2C13.11-2.13%2C20.26-1.55%2C15.88%2C1.3%2C22.53%2C10.13%2C22.53%2C10.13Z%22%2F%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M76.07%2C250.84c3.03-7.14%2C7.77-23.72%2C7.05-40.45%2C0%2C0-3.72.24-10.1-.21-6.38-.45-6.68-6.46-6.68-6.46%2C0%2C0-3.59.74-6.72-5.45%2C0%2C0-1.65-5.23-.58-10.87%2C1.07-5.64-.02-9.67-3.6-25.55%2C0%2C0-.88-2.66-2.14-6.22-2.52%2C12.25-11.87%2C26.69-25.33%2C38.22-9%2C7.71-18.77%2C13.15-27.98%2C16.08%2C4.52%2C4.85%2C9.6%2C7.05%2C17%2C20.19%2C5.13%2C9.11%2C6.1%2C15.84%2C7.04%2C20.71h52.03Z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") center/contain no-repeat;
+    animation:breathe 14s ease-in-out infinite alternate}
+  @keyframes breathe{0%{transform:translate(-50%,-46%) scale(1)}100%{transform:translate(-50%,-46%) scale(1.05)}}
   .hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
     filter:grayscale(.4) sepia(.15) contrast(1.06) brightness(.65)}
   @keyframes ken{0%{transform:scale(1.06) translate(.5%,.5%)}100%{transform:scale(1.16) translate(-1.5%,-1.5%)}}
@@ -87,9 +94,10 @@
   .tl-node.active i{background:var(--rust);border-color:var(--rust);box-shadow:0 0 0 5px rgba(193,80,46,.18)}
   .tl-node.passed i{border-color:var(--rust)}
   @media(max-width:600px){.tl-node span{writing-mode:vertical-rl;text-orientation:mixed;font-size:9px}}
-  .tl-panel{min-height:240px;position:relative}
-  .tl-step{position:absolute;inset:0;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .55s,transform .55s}
-  .tl-step.show{opacity:1;transform:none;pointer-events:auto;position:relative}
+  .tl-panel{display:grid;align-items:start}
+  .tl-step{grid-area:1/1;opacity:0;transform:translateY(16px);pointer-events:none;
+    visibility:hidden;transition:opacity .55s,transform .55s,visibility 0s .55s}
+  .tl-step.show{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .55s,transform .55s}
   .tl-step .num{font-family:var(--disp);color:var(--rust);font-size:clamp(2.6rem,7vw,5rem);line-height:1;float:left;margin-right:26px}
   .tl-step h3{font-family:var(--disp);font-size:clamp(1.5rem,3.4vw,2.4rem);margin-bottom:14px;padding-top:6px}
   .tl-step p{font-size:clamp(.95rem,1.7vw,1.15rem);line-height:1.75;color:var(--muted);max-width:58ch}
@@ -116,14 +124,15 @@
   .mz:hover .tag{opacity:1;transform:none}
   .mz .tag b{font-family:var(--disp);font-weight:700;font-size:clamp(.9rem,1.6vw,1.3rem);display:block}
   .mz .tag span{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre)}
-  .s-hero{grid-column:span 4;grid-row:span 2}
-  .s-big{grid-column:span 3}
-  .s-med{grid-column:span 2}
-  .s-tall{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .s-feat{grid-column:span 4}
+  .s-std{grid-column:span 2}
+  .mz .vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:var(--grade);background:#0a0907}
+  .mz .tag .meta{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre)}
+  .mz .tag .crew{display:block;margin-top:3px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
   @media(max-width:760px){
     .mosaic{grid-template-columns:repeat(2,1fr)}
-    .s-hero{grid-column:span 2;grid-row:span 1}.s-big{grid-column:span 2}
-    .s-med{grid-column:span 1}.s-tall{grid-column:span 1;grid-row:span 2}
+    .s-feat{grid-column:span 2}.s-std{grid-column:span 1}
     .mz .tag{opacity:1;transform:none}
   }
 
@@ -228,11 +237,10 @@
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="hero-media">
-    <!-- fondo de respaldo por si el video tarda o falla -->
-    <div class="fallback" style="background-image:url('https://images.unsplash.com/photo-1562058247-9eb3017fa552?w=1800&q=80&auto=format&fit=crop')"></div>
+    <!-- respaldo por si el video tarda o falla: vector del caballo -->
+    <div class="fallback"></div>
     <!-- SIZZLE REAL (Cloudinary) -->
-    <video autoplay muted loop playsinline preload="auto"
-           poster="https://images.unsplash.com/photo-1562058247-9eb3017fa552?w=1800&q=80&auto=format&fit=crop">
+    <video autoplay muted loop playsinline preload="auto">
       <source src="https://res.cloudinary.com/mbokd45q/video/upload/v1783438203/16-9_SHOWREEL_MAIN_PAGE_06.07.26_qpsycg.mp4" type="video/mp4">
     </video>
   </div>
@@ -299,19 +307,25 @@
     <h2>Nuestro trabajo está en estas historias<span class="o">.</span></h2>
   </div>
   <div class="mosaic rv">
-    <div class="mz s-hero"><div class="img photo" style="background-image:url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1400&q=80&auto=format&fit=crop')"></div><div class="tag"><b>Marea</b><span>Videoclip · 2024 · Dirección, Foto, Montaje</span></div></div>
-    <div class="mz s-tall"><div class="img photo" style="background-image:url('https://images.unsplash.com/photo-1566762492163-271805d66b63?w=900&q=80&auto=format&fit=crop')"></div><div class="tag"><b>Hotel Central</b><span>Cortometraje · 2023 · Sonido, Color</span></div></div>
-    <div class="mz s-med"><div class="img photo v-bw" style="background-image:url('https://unsplash.com/photos/l1L21HtHHuQ/download?force=true&w=900')"></div><div class="tag"><b>Ruido Blanco</b><span>Spot · 2024 · Producción, Foto</span></div></div>
-    <div class="mz s-med"><div class="img photo v-hot" style="background-image:url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop');background-position:25% 50%"></div><div class="tag"><b>Lumen</b><span>Videoclip · 2024 · Color, Sonido</span></div></div>
-    <div class="mz s-big"><div class="img photo" style="background-image:url('https://images.unsplash.com/photo-1562058247-9eb3017fa552?w=1100&q=80&auto=format&fit=crop')"></div><div class="tag"><b>Domingo</b><span>Documental · 2023 · Dirección, Producción, Montaje</span></div></div>
-    <div class="mz s-big"><div class="img photo v-fade" style="background-image:url('https://unsplash.com/photos/a-8FracGWiY/download?force=true&w=1100')"></div><div class="tag"><b>Estática</b><span>Fashion film · 2024 · Foto, Color</span></div></div>
-    <div class="mz s-med"><div class="img photo" style="background-image:url('https://unsplash.com/photos/ZpE2gobovro/download?force=true&w=900')"></div><div class="tag"><b>Backstage 47</b><span>Detrás de escena · 2022 · Montaje</span></div></div>
-    <div class="mz s-med"><div class="img photo v-bw" style="background-image:url('https://images.unsplash.com/photo-1562058247-9eb3017fa552?w=900&q=80&auto=format&fit=crop');background-position:70% 40%"></div><div class="tag"><b>Tierra Adentro</b><span>Documental · 2025 · Producción, Sonido</span></div></div>
-    <div class="mz s-med"><div class="img photo v-hot" style="background-image:url('https://unsplash.com/photos/l1L21HtHHuQ/download?force=true&w=900');background-position:30% 50%"></div><div class="tag"><b>Pulso</b><span>Spot · 2025 · Dirección, Color</span></div></div>
-    <div class="mz s-med"><div class="img photo" style="background-image:url('https://images.unsplash.com/photo-1566762492163-271805d66b63?w=900&q=80&auto=format&fit=crop');background-position:50% 70%"></div><div class="tag"><b>La Cueva</b><span>Videoclip · 2023 · Foto, Montaje</span></div></div>
-    <div class="mz s-med"><div class="img photo v-fade" style="background-image:url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=900&q=80&auto=format&fit=crop');background-position:80% 30%"></div><div class="tag"><b>Verano del 9</b><span>Cortometraje · 2022 · Sonido</span></div></div>
-    <div class="mz s-big"><div class="img photo v-bw" style="background-image:url('https://unsplash.com/photos/ZpE2gobovro/download?force=true&w=1100');background-position:30% 50%"></div><div class="tag"><b>Norte</b><span>Documental · 2023 · Producción, Montaje</span></div></div>
-    <div class="mz s-big"><div class="img photo" style="background-image:url('https://unsplash.com/photos/a-8FracGWiY/download?force=true&w=1100');background-position:60% 50%"></div><div class="tag"><b>Falso Directo</b><span>Branded content · 2024 · Dirección, Producción</span></div></div>
+    <div class="mz s-feat"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833739/16-9_SENNA_jc7quw.mp4"></video><div class="tag"><b>Senna</b><span class="meta">Serie / 2024</span><span class="crew">Sonido / Corina Safar</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833769/16-9_HUELLA_ywbcde.mp4"></video><div class="tag"><b>Huella</b><span class="meta">Spot / 2024</span><span class="crew">Dirección / Lorenzo Natalicchio</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833773/16-9_CITI_a0bfrn.mp4"></video><div class="tag"><b>Citi | You could be out west</b><span class="meta">Ad / 2024</span><span class="crew">Producción / Magali Pérez</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833753/16-9_BRAHMA_xpg6hc.mp4"></video><div class="tag"><b>Brahma | Sed de promo</b><span class="meta">Ad / 2025</span><span class="crew">Montaje / Franco Porcile</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833738/16-9_LAS_CORREDORAS_ulolf7.mp4"></video><div class="tag"><b>Las corredoras</b><span class="meta">Largometraje / 2024</span><span class="crew">Sonido / Corina Safar</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833826/16-9_WORLDCUP_SON_nqsnr7.mp4"></video><div class="tag"><b>Our streets our game</b><span class="meta">Spot / 2026</span><span class="crew">Color / Manuel Martos</span></div></div>
+    <div class="mz s-feat"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833769/16-9_ALLI_DONDE_LAS_COSAS_PASAN_nrl96x.mp4"></video><div class="tag"><b>Allí donde las cosas pasan</b><span class="meta">Cortometraje / 2023</span><span class="crew">Fotografía / Lorenzo Natalicchio</span></div></div>
+    <div class="mz s-feat"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833773/16-9_EL_HOMBRE_QUE_v2trhk.mp4"></video><div class="tag"><b>El hombre que amaba los platos voladores</b><span class="meta">Largometraje / 2024</span><span class="crew">Producción / Magali Pérez</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833770/16-9_JOBS_zqppuk.mp4"></video><div class="tag"><b>Jobs</b><span class="meta">Ad / 2025</span><span class="crew">Fotografía / Lorenzo Natalicchio</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833754/16-9_UALA_xfr8he.mp4"></video><div class="tag"><b>Ualá | Estás para Ualá</b><span class="meta">Ad / 2025</span><span class="crew">Montaje / Franco Porcile</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833743/16-9_SL_ATOMIK_fkeyvs.mp4"></video><div class="tag"><b>Atomik x San Lorenzo</b><span class="meta">Ad / 2025</span><span class="crew">Sonido / Corina Safar</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833771/16-9_EL_GRAN_CARMELO_kutihm.mp4"></video><div class="tag"><b>El gran Carmelo</b><span class="meta">Teaser / 2025</span><span class="crew">Gaffer / Lorenzo Natalicchio</span></div></div>
+    <div class="mz s-feat"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833754/16-9_ROYAL_ENFIELD_jh8g3v.mp4"></video><div class="tag"><b>Royal Enfield | No turning back</b><span class="meta">Ad / 2025</span><span class="crew">Montaje / Franco Porcile</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784834040/16-9_YACI_vv9ffi.mp4"></video><div class="tag"><b>Somos Yací</b><span class="meta">Ad / 2026</span><span class="crew">Color / Manuel Martos</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833778/16-9_CLARO_sizt0q.mp4"></video><div class="tag"><b>Claro | Click click click</b><span class="meta">Ad / 2022</span><span class="crew">Producción / Magali Pérez</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833740/16-9_UN_PASEO_ULTRA_DEFORMER_avoyau.mp4"></video><div class="tag"><b>Un paseo ultradeformer</b><span class="meta">Serie web / 2024</span><span class="crew">Sonido / Corina Safar</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833755/16-9_BURGER_KING_w8vlnf.mp4"></video><div class="tag"><b>Burger King | ¡Nada de humo!</b><span class="meta">Ad / 2025</span><span class="crew">Montaje / Franco Porcile</span></div></div>
+    <div class="mz s-feat"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833805/16-9_MARICA_YA_bseupz.mp4"></video><div class="tag"><b>Mari La Carajita | Marik ya!</b><span class="meta">Videoclip / 2025</span><span class="crew">Color / Manuel Martos</span></div></div>
+    <div class="mz s-std"><video class="vid" muted loop playsinline preload="none" data-src="https://res.cloudinary.com/mbokd45q/video/upload/f_auto,q_auto/v1784833773/16-9_OPPO_UCL_fhoxu8.mp4"></video><div class="tag"><b>Oppo x UCL | Let the magic unfold</b><span class="meta">Ad / 2023</span><span class="crew">Producción / Magali Pérez</span></div></div>
   </div>
 </section>
 
@@ -397,6 +411,17 @@
   nodes.forEach(n=>n.addEventListener('click',()=>setStep(+n.dataset.step,true)));
   const tlIO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&!timer)timer=setInterval(()=>setStep((cur+1)%nodes.length),7000)})},{threshold:.4});
   tlIO.observe(document.querySelector('.tl-sec'));
+
+  // ===== VIDEOS DE PROYECTOS: cargan y corren solo en pantalla =====
+  const vids=[...document.querySelectorAll('.mz .vid')];
+  const vIO=new IntersectionObserver(es=>es.forEach(e=>{
+    const v=e.target;
+    if(e.isIntersecting){
+      if(!v.src && v.dataset.src){v.src=v.dataset.src}
+      const pr=v.play(); if(pr&&pr.catch){pr.catch(()=>{})}
+    } else { v.pause() }
+  }),{threshold:.25});
+  vids.forEach(v=>vIO.observe(v));
 
   // ===== BIOS (panel lateral que compacta) =====
   const bios=[
